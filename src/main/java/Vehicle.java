@@ -59,6 +59,7 @@ public class Vehicle extends Asset {
             value = 1000;
         }
 
+
         if (odometer > 100000) {
             if (!makeModel.contains("Honda") &&
                     !makeModel.contains("Toyota")) {
