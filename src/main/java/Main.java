@@ -1,7 +1,10 @@
 import java.math.BigDecimal;
+import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
+
+        ArrayList<Asset> assets = new ArrayList<>();
 
         Vehicle car = new Vehicle(
                 "My car",
@@ -12,7 +15,23 @@ public class Main {
                 120000
         );
 
-        System.out.println("Original cost: " + car.getOriginalCost());
-        System.out.println("Current value: " + car.getValue());
+        House house = new House(
+                "My house",
+                "2020-05-10",
+                new BigDecimal("250000"),
+                "123 Main Street",
+                1,
+                1500,
+                4000
+        );
+
+        assets.add(car);
+        assets.add(house);
+
+        for (Asset item  : assets) {
+            System.out.println(item.getDescription());
+            System.out.println("Current value: " + item.getValue());
+            System.out.println();
+        }
     }
 }
