@@ -25,8 +25,18 @@ public class Main {
                 4000
         );
 
+
+        Cash cash = new Cash(
+                "My cash",
+                "2026-11-18",
+                new BigDecimal("100")
+        );
+
+
+
         assets.add(car);
         assets.add(house);
+        assets.add(cash);
 
         BigDecimal total = BigDecimal.ZERO;
 
