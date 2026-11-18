@@ -28,10 +28,15 @@ public class Main {
         assets.add(car);
         assets.add(house);
 
-        for (Asset item  : assets) {
-            System.out.println(item.getDescription());
-            System.out.println("Current value: " + item.getValue());
+        BigDecimal total = BigDecimal.ZERO;
+
+        for (Asset item : assets) {
+            System.out.println(item);
             System.out.println();
+
+            total = total.add(item.getValue());
         }
+
+        System.out.println("Total value: " + total);
     }
 }

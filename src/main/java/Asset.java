@@ -44,4 +44,13 @@ public class Asset {
     public void setOriginalCost(BigDecimal originalCost) {
         this.originalCost = originalCost;
     }
+
+    @Override
+    public String toString() {
+        return "Description: " + description
+                + "\nDate acquired: " + dateAcquired
+                + "\nOriginal cost: " + originalCost
+                + "\nCurrent value: " + getValue();
+    }
+
 }
